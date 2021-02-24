@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cadastro</title>
+	<meta http-equiv="refresh" content="500">
+	<meta name="@autor" content="David Tavares">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<script type="text/javascript" src="script.js"></script>
+
+												<!-- JQUERY -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script>
+		
+		$(document).ready(function(){
+  $("#hide").click(function(){
+    $("p").hide();
+  });
+  $("#show").click(function(){
+    $("p").show();
+  		});
+	});
+	</script>
+	 
+	
+</head>
+<body>
+	<main>
+			<form>
+			<fieldset id="form">				
+				<label for="Nome">Nome completo:</label><br>
+				<input type="text" name="Nome" id="Nome" autofocus class="inputB" placeholder="Digite seu nome aqui" required><br><br>
+				<label for="E-mail">E-mail:</label><br>
+				<input type="email" name="E-mail" id="E-mail" class="inputB" placeholder="Digite seu E-mail aqui" required><br><br>
+				<label for="telefone">Telefone:</label><br>
+				<input type="tel" class="inputB" id="telefone" name="telefone" placeholder="Digite seu número de telefone aqui"><br><br>
+				<label for="data">Data de Nascimento:</label><br>
+				<input type="date" class="inputB" id="data" name="data" required><br><br>
+
+				<fieldset id="genero">
+					<legend>Gênero<legend>
+					<input type="radio" name="genero" checked id="radiogenero1"  value="Masculino"><label for="radiogenero1">Masculino</label><br>
+				    <input type="radio" name="genero" id="radiogenero2" value="Feminino"><label for="radiogenero2">Feminino</label>
+				</fieldset>
+				<br>
+				<button type="button"class="inputS" name="cadastrar" onclick="relatorio()">Cadastrar</button> &nbsp;
+				<button type="button"class="inputS" name="cadastrar" onclick="listar()">listar</button>
+
+			</fieldset>
+			</form>
+
+			<br>
+			<fieldset>
+			<p id="demo"></p>
+			</fieldset>
+	</main>
+</body>
+</html>
