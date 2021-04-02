@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cadastro</title>
+    <meta http-equiv="refresh" content="500" />
+    <meta name="@autor" content="David Tavares" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="./css/estilo.css" />
+    <script defer type="text/javascript" src="./js/script.js"></script>
+    <script defer type="text/javascript" src="./js/user.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"
+      integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <form>
+        <label for="Nome">Nome:</label><br />
+        <input
+          type="text"
+          maxlength="16"
+          name="Nome"
+          id="Nome"
+          autofocus
+          class="inputData"
+          placeholder="Digite somente primeiro e segundo nome aqui"
+        /><br /><br />
+        <label for="E-mail">E-mail:</label><br />
+        <input
+          type="email"
+          maxlength="30"
+          name="E-mail"
+          id="E-mail"
+          class="inputData"
+          placeholder="Digite seu E-mail aqui"
+        /><br /><br />
+        <label for="telefone">Telefone:</label><br />
+        <input
+          type="tel"
+          class="inputData"
+          id="telefone"
+          name="telefone"
+          placeholder="Digite seu número de telefone aqui"
+        /><br /><br />
+        <label for="data">Data de Nascimento:</label><br />
+        <input
+          type="date"
+          class="inputDate"
+          id="data"
+          name="data"
+        /><br /><br />
+
+        <label>Selecione sue gênero</label><br />
+        <input
+          type="radio"
+          name="genero"
+          id="radiogenero1"
+          value="Masculino"
+        /><label for="radiogenero1">Masculino</label>
+        <input
+          type="radio"
+          name="genero"
+          id="radiogenero2"
+          value="Feminino"
+        /><label for="radiogenero2">Feminino</label>
+
+        <div style="height: 10px; width: 10px"></div>
+        <button
+          type="button"
+          class="actionsBTN"
+          name="cadastrar"
+          onclick="relatorio()"
+        >
+          Cadastrar
+        </button>
+        <button
+          type="button"
+          class="actionsBTN"
+          name="listar"
+          onclick="listarCadastrados()"
+        >
+          listar
+        </button>
+        <button
+          type="button"
+          class="actionsBTN"
+          name="pdf"
+          onclick="gerarRelacaoPDF()"
+        >
+          GerarPdf
+        </button>
+      </form>
+
+      <br />
+      <div id="demo"></div>
+    </main>
+  </body>
+</html>
